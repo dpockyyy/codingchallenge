@@ -1,6 +1,27 @@
 <div class="problem-list">
-    <ul>
-        <li><a href="/problem">Two sum</a></li>
-        <li>Add two numbers</li>
-    </ul>
+    <div class="message-grid">
+        <div class="welcome-message">
+
+      
+
+             Hey Coding Warriors, welcome to the battlefield of algorithms and logic! <br><br>
+             Strap in, because we're about to embark on a relentless journey through the realm of programming. <br>Embrace the discomfort, attack each evolution with an unyielding fire, and emerge as a coding beast. <br>So, gear up, charge headfirst into the coding chaos, and let the evolutions transform you into a relentless coding machine. <br>Let's crush those bugs, smash those challenges, and emerge as champions of the coding arena!
+        </div>
+    </div>
+    <div class="problem-grid">
+        <table class="problems">
+            <tr>
+                <th></th>
+                <th><h3>Title</h3></th>
+                <th><h3>Difficulty</h3></th>
+            </tr>
+            <% for (let i = 0; i < problems.length; i++ ) { %>
+                <tr>
+                    <td class="evolution-id"><%=`Evolution ${problems[i].evolution_id}`%></td>
+                    <td class="problem-title"><a href="/evolution/<%=problems[i].evolution_id%>"><%= problems[i].task_title %></a></td>
+                    <td class="problem-difficulty"><%= problems[i].difficulty%></td>
+                </tr>
+            <% } %>
+        </table>
+    </div>
 </div>
